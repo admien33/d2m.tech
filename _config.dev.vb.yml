@@ -1,0 +1,6 @@
+url: http://192.168.56.2:4000
+# Plugin: jekyll-picture-tag
+#  picture:
+#      url: http://192.168.56.2:4000
+# assets:
+#    cache: false
