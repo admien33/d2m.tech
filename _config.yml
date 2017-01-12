@@ -11,6 +11,8 @@ github_username:
 facebook_username:  
 email_username:  your-email@yourdomain.com
 
+timezone: Europe/Paris
+
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
 # google_tracking_id:
