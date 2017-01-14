@@ -24,3 +24,7 @@ paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed]
+
+# Staticman
+staticmanUrl: https://arcane-woodland-50389.herokuapp.com/v2/entry/admien33/d2m.tech/master/comments
+

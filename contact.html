@@ -46,3 +46,25 @@ header-img: "img/contact-bg.jpg"
         </div>
     </div>
 </form>
+
+
+<form method="post" action="{{ site.staticmanUrl }}">
+  <input name="options[redirect]" type="hidden" value="https://admien33.github.io/d2m.tech/confirmation-envoi.html">
+  <input name="options[redirect500]" type="hidden" value="https://admien33.github.io/d2m.tech/echec-envoi.html">
+  <!-- e.g. "2016-01-02-this-is-a-post" -->
+  <input type="hidden" name="options[slug]" value="2016-01-14-test">
+  <input type="hidden" name="options[parent]" value="2016-01-14-test">
+  <input type="hidden" name="options[origin]" value="https://admien33.github.io/d2m.tech/">
+  <input type="hidden" name="options[gotcha]" value="">
+
+  <label><input name="fields[name]" type="text">Nom</label>
+  <label><input name="fields[email]" type="email">E-mail*</label>
+  <label><textarea name="fields[message]"></textarea>Message</label>
+  <!-- <input id="form-subscribe" type="checkbox" name="options[subscribe]" value="email" class="checkbox"> -->
+  <!-- <button type="submit">Go!</button> -->
+  <div class="g-recaptcha" data-sitekey="6Ld71REUAAAAAE1k8IYNZXP-xmaKoL6vOTMumdTK"></div>
+  <label for="form-subscribe" class="form__field checkbox__label">Je m'abonne à la newsletter</label>
+  <input class="cta" type="submit" value="Envoyer" />
+</form>
+
+<script src='https://www.google.com/recaptcha/api.js?hl=fr'></script>
