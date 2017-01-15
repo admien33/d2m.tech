@@ -21,23 +21,37 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
+            var fields={};
+            var options={};
+            var recaptcha = grecaptcha.getResponse();
+
+            fields['name']=$("input#name").val();
+            fields['email']=$("input#email").val();
+            fields['message']=$("textarea#message").val();
+            options['slug']=$("input#slug").val();  
+            options['parent']=$("input#parent").val(); 
+            options['origin']=$("input#origin").val(); 
+            options['gotcha']=$("input#gotcha").val(); 
+
+            // var name = $("input#name").val();
+            // var email = $("input#email").val();
+            // var phone = $("input#phone").val();
+            // var message = $("textarea#message").val();
+            // var firstName = name; // For Success/Failure Message
+            var firstName = fields['name']; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
-            }
+            }            
+
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "https://arcane-woodland-50389.herokuapp.com/v2/entry/admien33/d2m.tech/master/comments",
                 type: "POST",
+                dataType: 'text',
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
+                    fields: fields,
+                    options: options,
+                    'g-recaptcha-response': recaptcha
                 },
                 cache: false,
                 success: function() {
@@ -996,6 +1010,7 @@ $('#name').focus(function() {
     };
 
 })(jQuery);
+// fin jqBootstrapValidation
 
 // make all images responsive
 $(function() {
