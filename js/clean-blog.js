@@ -45,7 +45,7 @@ $(function() {
             }            
 
             $.ajax({
-                url: "https://arcane-woodland-50389.herokuapp.com/v2/entry/admien33/d2m.tech/staticman/comments",
+                url: "https://arcane-woodland-50389.herokuapp.com/v2/entry/admien33/d2m.tech/staticman_data/comments",
                 type: "POST",
                 dataType: 'text',
                 data: {
