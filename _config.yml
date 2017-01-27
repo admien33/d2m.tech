@@ -1,6 +1,6 @@
 # Site settings
 title: d2m.tech
-header-img: img/home-bg.jpg
+header-img: pages/home-bg.jpg
 email: your-email@yourdomain.com
 copyright_name: d2m.tech
 description: "Site web based on start bootstrap!"
@@ -12,7 +12,7 @@ twitter_username:
 github_username:  
 facebook_username:  
 email_username:  your-email@yourdomain.com
-
+root_folder_img: /img
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
